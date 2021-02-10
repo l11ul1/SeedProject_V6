@@ -28,5 +28,29 @@ namespace SeedProject_V6.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult SchoolProgram()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult SignUp()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult Course()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult SignIn()
+        {
+            return View();
+        }
+
     }
 }

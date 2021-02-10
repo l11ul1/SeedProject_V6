@@ -26,12 +26,12 @@
         <!-- Main Navigation -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-secondary justify-content-between main-menu text-uppercase pt-3 pb-3">
 
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" asp-action="Index">
                 <img src="~/images/logo/SEED LOGO.png" width="32" height="40" alt="logo">
             </a>
             <h4 class="navbar-title">SEED ACADEMY</h4>
             <div class="navbar-nav top-nav">
-                <a class="nav-item nav-link" href="#">Login</a>
+                <a class="nav-item nav-link" asp-action="SignIn">Login</a>
                 <a class="nav-item nav-link" href="#contact_us">Contact us</a>
             </div>
         </nav>
@@ -64,20 +64,20 @@
                         <a class="nav-link" asp-action="Introduction">Introduction</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Course
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="#">SKILL LEARNING</a>
-                            <a class="dropdown-item" href="#">ACADEMIC BOOST</a>
-                            <a class="dropdown-item" href="#">TEST PREP</a>
+                            <a class="dropdown-item" asp-action="Course">SKILL LEARNING</a>
+                            <a class="dropdown-item" asp-action="Course">ACADEMIC BOOST</a>
+                            <a class="dropdown-item" asp-action="Course">TEST PREP</a>
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">School program</a>
+                        <a class="nav-link" asp-action="SchoolProgram">School program</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
+                        <a class="nav-link" asp-action="SignUp">Register</a>
                     </li>
                 </ul>
             </div>
