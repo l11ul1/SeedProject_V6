@@ -1,0 +1,43 @@
+.myCard {
+    height: 260px;
+}
+
+.first {
+    background-color: cornflowerblue;
+}
+
+.second {
+    background-color: seagreen;
+}
+
+.third {
+    background-color: mediumpurple;
+}
+
+.fourth {
+    background-color: hotpink;
+}
+
+.cardText {
+    color: whitesmoke;
+    width: 300px;
+}
+
+.plus {
+    text-shadow: 3px 6px #272634;
+}
+
+.no-padding {
+    padding: 0
+}
+
+.method-section-card {
+    height: 250px;
+    width: 250px;
+    border:thick;
+    border-radius: 360px;
+}
+
+h5.method-text {
+   color: white; 
+}
