@@ -10464,3 +10464,13 @@ html {
 .form-section {
     padding-bottom: 0;
 }
+
+.carousel-img {
+    background-color: #35918c;
+}
+
+.carousel-indicators li {
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+}
