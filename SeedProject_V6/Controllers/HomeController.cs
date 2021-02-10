@@ -23,5 +23,10 @@ namespace SeedProject_V6.Controllers
             return View();
         }
 
+        [HttpGet]
+        public ActionResult Introduction() {
+            return View();
+        }
+
     }
 }
