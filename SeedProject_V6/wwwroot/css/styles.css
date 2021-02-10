@@ -10474,3 +10474,7 @@ html {
     height: 10px;
     border-radius: 100%;
 }
+
+.opacity {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
