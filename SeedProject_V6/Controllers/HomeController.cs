@@ -43,7 +43,7 @@ namespace SeedProject_V6.Controllers
         [HttpGet]
         public ActionResult SignIn()
         {
-            return View();
+            return Redirect("https://seed.moodlecloud.com/login/index.php");
         }
 
         [HttpGet]
