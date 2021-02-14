@@ -10482,3 +10482,11 @@ html {
 .partners-link:hover {
     color: #1abc9c;
 }
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    margin-top: 0px;
+}
