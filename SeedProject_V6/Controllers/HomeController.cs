@@ -41,13 +41,25 @@ namespace SeedProject_V6.Controllers
         }
 
         [HttpGet]
-        public ActionResult Course()
+        public ActionResult SignIn()
         {
             return View();
         }
 
         [HttpGet]
-        public ActionResult SignIn()
+        public ActionResult Esl()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult AcademicBoost()
+        {
+            return View();
+        }
+
+        [HttpGet]
+        public ActionResult TestPrep()
         {
             return View();
         }
