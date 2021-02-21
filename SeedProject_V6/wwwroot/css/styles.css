@@ -10538,3 +10538,36 @@ html {
 .graphics-card {
     height: 310px !important;
 }
+
+
+/** school program media queries*/
+
+@media only screen and (max-width: 1199px) {
+    .graphics-card {
+        height: 450px !important;
+    }
+
+    .graphics-img {
+        height: 300px;
+    }
+
+    .arrow2 {
+        top: 65%;
+        left: 5%;
+    }
+}
+
+@media only screen and (max-width: 681px) {
+    .graphics-card {
+        height: 300px !important;
+    }
+
+    .graphics-img {
+        height: 180px;
+    }
+
+    .arrow2 {
+        top: 60%;
+        left: 5%;
+    }
+}
