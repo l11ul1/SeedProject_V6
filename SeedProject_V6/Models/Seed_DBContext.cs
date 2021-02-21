@@ -6,13 +6,13 @@ using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace SeedProject_V6.Models
 {
-    public partial class Seed_Project_DBContext : DbContext
+    public partial class Seed_DBContext : DbContext
     {
-        public Seed_Project_DBContext()
+        public Seed_DBContext()
         {
         }
 
-        public Seed_Project_DBContext(DbContextOptions<Seed_Project_DBContext> options)
+        public Seed_DBContext(DbContextOptions<Seed_DBContext> options)
             : base(options)
         {
         }
@@ -25,7 +25,7 @@ namespace SeedProject_V6.Models
             if (!optionsBuilder.IsConfigured)
             {
 #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-                optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB; Database=Seed_Project_DB; Integrated Security=True");
+                optionsBuilder.UseSqlServer("Data Source=seed.database.windows.net;Initial Catalog=Seed_DB;User ID=vlad;Password=3989302As;Connect Timeout=60;Encrypt=True;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
             }
         }
 
@@ -54,12 +54,9 @@ namespace SeedProject_V6.Models
 
             modelBuilder.Entity<SeedProductInfo>(entity =>
             {
-                entity.HasKey(e => e.ProductId)
-                    .HasName("PK_Seed_Products");
+                entity.HasNoKey();
 
                 entity.ToTable("seed_ProductInfo");
-
-                entity.Property(e => e.ProductId).HasColumnName("productId");
 
                 entity.Property(e => e.DateAdded)
                     .HasColumnType("date")
@@ -70,6 +67,10 @@ namespace SeedProject_V6.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("productDescription");
+
+                entity.Property(e => e.ProductId)
+                    .ValueGeneratedOnAdd()
+                    .HasColumnName("productId");
 
                 entity.Property(e => e.ProductImg)
                     .IsRequired()
@@ -86,6 +87,12 @@ namespace SeedProject_V6.Models
                 entity.Property(e => e.ProductRating).HasColumnName("productRating");
 
                 entity.Property(e => e.RatingCount).HasColumnName("ratingCount");
+
+                entity.HasOne(d => d.Product)
+                    .WithMany()
+                    .HasForeignKey(d => d.ProductId)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_seed_ProductInfo_Product");
             });
 
             OnModelCreatingPartial(modelBuilder);
