@@ -36,10 +36,10 @@ namespace SeedProject_V6.Controllers
                     Console.WriteLine(readContent);
 
 
-					List<SeedProduct> productResult = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
+                    List<SeedProduct> productResult = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
 
                     products = productResult;
-				}
+                }
                 else //web api sent error response 
                 {
                     //log response status here..
@@ -49,10 +49,12 @@ namespace SeedProject_V6.Controllers
                     ModelState.AddModelError(string.Empty, "Server error. Please contact administrator.");
                 }
             }
-
-
-
             return View(products);
+        }
+
+        [HttpGet]
+        public RedirectResult goToCart(int ProductID) {
+            return Redirect("https://rainforest.azurewebsites.net/Product/ViewProduct?productId="+ProductID);
         }
     }
 }
