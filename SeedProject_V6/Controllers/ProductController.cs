@@ -37,7 +37,6 @@ namespace SeedProject_V6.Controllers
 
 
 					List<SeedProduct> productResult = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
-                    List<SeedProductInfo> productInfoResult = JsonConvert.DeserializeObject<List<SeedProductInfo>>(readContent);
 
                     products = productResult;
 				}
