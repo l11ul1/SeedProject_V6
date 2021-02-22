@@ -15,7 +15,7 @@ namespace SeedProject_V6.Controllers
         Seed_DBContext context = new Seed_DBContext();
 
         IEnumerable<SeedProduct> products { get; set; }
-
+        List<SeedProduct> English = new List<SeedProduct>();
         [HttpGet]
         public async Task<IActionResult> AllProductsAsync()
         {
@@ -37,7 +37,13 @@ namespace SeedProject_V6.Controllers
 
 
                     List<SeedProduct> productResult = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
+                    for (int i = 0; i < productResult.Count; i++) {
+                        if (productResult[i].ProductName.Contains("ESL") || productResult[i].ProductName.Contains("IELTS")) {
+                            English.Add(productResult[i]);
+                        }
+                    }
 
+                    
                     products = productResult;
                 }
                 else //web api sent error response 
