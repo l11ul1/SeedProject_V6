@@ -19,11 +19,9 @@ namespace SeedProject_V6.Controllers
         [HttpGet]
         public async Task<IActionResult> AllProductsAsync()
         {
-            //List<SeedProduct> products = new List<SeedProduct>();
-
             using (var client = new HttpClient())
             {
-                //client.BaseAddress = new Uri("https://projectrainforest.azurewebsites.net/api/VendorProduct/GetVendorProducts/25");
+
                 var request = new HttpRequestMessage(HttpMethod.Get,
             "https://rainforest.azurewebsites.net/api/VendorProduct/GetVendorProducts/37");
                 //HTTP GET
@@ -38,9 +36,10 @@ namespace SeedProject_V6.Controllers
                     Console.WriteLine(readContent);
 
 
-					List<SeedProduct> result = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
+					List<SeedProduct> productResult = JsonConvert.DeserializeObject<List<SeedProduct>>(readContent);
+                    List<SeedProductInfo> productInfoResult = JsonConvert.DeserializeObject<List<SeedProductInfo>>(readContent);
 
-					products = result;
+                    products = productResult;
 				}
                 else //web api sent error response 
                 {
