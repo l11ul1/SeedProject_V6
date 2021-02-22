@@ -2,7 +2,7 @@
 
 @{
     Layout = "_Layout";
-    ViewBag.Title = "Test Prep - Seed";
+    ViewBag.Title = "English Learning - Seed";
 }
 
 <div class="container">
@@ -19,12 +19,12 @@
             </thead>
             @foreach (var item in Model)
             {
-            <tr class="">
-                <td><img src="@item.ProductInfo.ProductImg" style="width: 150px; height: 150px;" /></td>
-                <td class="text-center align-middle">@item.ProductInfo.ProductDescription</td>
-                <td class="text-center align-middle">@item.ProductInfo.ProductPrice $</td>
-                <td class="text-center align-middle"><a class='btn btn-primary' style="width: 150px;" asp-action="goToCart" asp-route-ProductID="@item.ProductId">Add to Card</a></td>
-            </tr>
+                <tr class="">
+                    <td><img src="@item.ProductInfo.ProductImg" style="width: 150px; height: 150px;" /></td>
+                    <td class="text-center align-middle">@item.ProductInfo.ProductDescription</td>
+                    <td class="text-center align-middle">@item.ProductInfo.ProductPrice $</td>
+                    <td class="text-center align-middle"><a class='btn btn-primary' style="width: 150px;" asp-action="goToCart" asp-route-ProductID="@item.ProductId">Add to Card</a></td>
+                </tr>
             }
         </table>
     </div>
