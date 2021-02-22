@@ -10,6 +10,8 @@ namespace SeedProject_V6.Controllers
     public class ProductController : Controller
     {
         Seed_DBContext context = new Seed_DBContext();
+
+        [HttpGet]
         public IActionResult AllProducts()
         {
             List<SeedProduct> products = context.SeedProducts.ToList();   
