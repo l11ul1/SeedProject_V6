@@ -26,7 +26,6 @@ namespace SeedProject_V6
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
-
             services.AddDbContext<Seed_DBContext>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("seed_academy_db")));
         }
