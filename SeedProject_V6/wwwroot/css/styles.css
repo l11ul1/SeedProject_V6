@@ -10310,6 +10310,10 @@ html {
     border-radius: 10% !important;
 }
 
+.b-radius {
+    border-radius: 10% !important;
+}
+
 .feed-img {
    
 }
@@ -10653,11 +10657,11 @@ html {
 
 .one-stop {
     animation: slideInFromLeft 2s ease-out;
-    animation-delay: 2s;
 }
 
 @keyframes slideInFromLeft {
     0% {
+        animation-delay: 2s;
         transform: translateX(-100%);
     }
 
@@ -10673,9 +10677,11 @@ header {
 .section-title {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+
+
 
 .section-title::before, .section-title::after {
     content: '';
@@ -10692,4 +10698,30 @@ header {
 .section-title::after {
     background: linear-gradient(to left, rgba(240, 240, 240, 0.00), #343a40);
     margin-left: 4vh;
-} 
+}
+
+
+.section-title-primary {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #f58a07;
+}
+
+.section-title-primary::before, .section-title-primary::after {
+    content: '';
+    display: block;
+    height: 0.07em;
+    min-width: 30vw;
+}
+
+    .section-title-primary::before {
+        background: linear-gradient(to right, rgba(240, 240, 240, 0.00), #ffa500);
+        margin-right: 4vh;
+    }
+
+    .section-title-primary::after {
+        background: linear-gradient(to left, rgba(240, 240, 240, 0.00), #ffa500);
+        margin-left: 4vh;
+    } 
