@@ -37,10 +37,32 @@
 .method-section-card {
     height: 250px;
     width: 250px;
-    border:thick;
+    border: thick;
     border-radius: 360px;
 }
 
+.low {
+
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/low.jpg") !important;
+    background-size: 100%;
+}
+
+.mid {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/mid.jpg") !important;
+    background-size: 100%;
+}
+.high {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url("../images/high.png") !important;
+    background-size: 100%;
+}
+
+
+
 h5.method-text {
    color: white; 
+}
+
+h5.method-text:hover {
+    text-decoration: none;
+    color: #FFA500;
 }
