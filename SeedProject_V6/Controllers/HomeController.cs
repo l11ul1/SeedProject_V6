@@ -134,5 +134,12 @@ namespace SeedProject_V6.Controllers
             return products;
         }
 
+
+        [HttpGet]
+        public RedirectResult goToCart(int ProductID)
+        {
+            return Redirect("https://rainforest.azurewebsites.net/Product/ViewProduct?productId=" + ProductID);
+        }
+
     }
 }
