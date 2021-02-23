@@ -6069,7 +6069,7 @@ a.close.disabled {
 a.bg-primary:hover, a.bg-primary:focus,
 button.bg-primary:hover,
 button.bg-primary:focus {
-  background-color: #148f77 !important;
+  background-color: #d47d12 !important;
 }
 
 .bg-secondary {
@@ -6078,6 +6078,10 @@ button.bg-primary:focus {
 
 .bg-thirdly {
     background-color: #ededed !important;
+}
+
+.bg-orange {
+    background-color: #f58a07 !important;
 }
 
 a.bg-secondary:hover, a.bg-secondary:focus,
@@ -10663,7 +10667,6 @@ html {
 }
 
 header {
-    border-top: 2px solid #ededed;
     border-bottom: 2px solid #ededed;
 }
 
