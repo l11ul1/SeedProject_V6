@@ -10303,7 +10303,7 @@ html {
 
 .feed-card {
     border: 0px !important;
-    border-radius: 0rem !important;
+    border-radius: 10% !important;
 }
 
 .feed-img {
@@ -10444,15 +10444,15 @@ html {
     }
 
 
-    .contact-form {
-        background: #fff;
-        margin-top: 3rem;
-        margin-bottom: 5%;
-        padding: 0px 20px 20px 20px;
-        width: 70%;
-        border-radius: 20px;
-        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
-    }
+.contact-form {
+    background: #fff;
+    margin-top: 3rem;
+    margin-bottom: 5%;
+    padding: 0px 20px 20px 20px;
+    width: 70%;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px 5px rgba(0,0,0,0.19), 0 6px 6px 3px rgba(0,0,0,0.23);
+}
 
         .contact-form .form-control {
             border-radius: 1rem;
@@ -10615,6 +10615,38 @@ html {
     margin: auto;
 }
 
+.seed-feed-divider {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    height: 1px;
+}
+
+.div-transparent:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    width: 90%;
+    height: 1px;
+    background-image: linear-gradient(to right, transparent, rgb(48,49,51), transparent);
+}
+
+.div-arrow-down:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: -7px;
+    left: calc(50% - 7px);
+    width: 14px;
+    height: 14px;
+    transform: rotate(45deg);
+    background-color: white;
+    border-bottom: 1px solid rgb(48,49,51);
+    border-right: 1px solid rgb(48,49,51);
+}
+
 .one-stop {
     animation: slideInFromLeft 2s ease-out;
     animation-delay: 2s;
@@ -10634,3 +10666,27 @@ header {
     border-top: 2px solid #ededed;
     border-bottom: 2px solid #ededed;
 }
+
+.section-title {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, .45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-title::before, .section-title::after {
+    content: '';
+    display: block;
+    height: 0.07em;
+    min-width: 30vw;
+}
+
+.section-title::before {
+    background: linear-gradient(to right, rgba(240, 240, 240, 0.00), #343a40);
+    margin-right: 4vh;
+}
+
+.section-title::after {
+    background: linear-gradient(to left, rgba(240, 240, 240, 0.00), #343a40);
+    margin-left: 4vh;
+} 
