@@ -21,8 +21,8 @@
             {
                 <tr>
                     <td><img src="@item.ProductInfo.ProductImg" class="img-fluid" /></td>
-                    <td class="text-center align-middle"><h5>@item.ProductName</h5><br /><p id="table-description"> @item.ProductInfo.ProductDescription</p></td>
-                    <td class="text-center align-middle"><h6>@item.ProductInfo.ProductPrice $</h6> <br /> <p class="border-top text-nowrap">Get it now for @{double discount = Convert.ToDouble(item.ProductInfo.ProductPrice); discount = discount * 0.80;} @discount$</p></td>
+                    <td class="text-center align-middle"><h5 id="font-table">@item.ProductName</h5><br /><p id="table-description"> @item.ProductInfo.ProductDescription</p></td>
+                    <td class="text-center align-middle"><h6>@item.ProductInfo.ProductPrice $</h6> <br /> <p class="border-top" id="font-table">Get it now for @{double discount = Convert.ToDouble(item.ProductInfo.ProductPrice); discount = discount * 0.80;} @discount$</p></td>
                     <td class="text-center align-middle"><a class='btn btn-primary text-nowrap' asp-action="goToCart" asp-route-ProductID="@item.ProductId">Add to Card</a></td>
                 </tr>
             }

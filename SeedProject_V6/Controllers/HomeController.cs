@@ -70,7 +70,7 @@ namespace SeedProject_V6.Controllers
         [HttpGet]
         public ActionResult TestPrep()
         {
-            return View(FindProductsByName("Math", "Science"));
+            return View(FindProductsByName("Test", "Prep"));
         }
 
         [HttpGet]
@@ -82,7 +82,7 @@ namespace SeedProject_V6.Controllers
         [HttpGet]
         public ActionResult SeedCredit()
         {
-            return View(FindProductsByName("Math", "Science"));
+            return View(FindProductsByName("Seed", "Credit"));
         }
 
         [HttpGet]
