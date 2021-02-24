@@ -11036,6 +11036,10 @@ html {
     #table-description {
         display: none;
     }
+
+    #font-table {
+        font-size: 2.2vw !important;
+    }
 }
 
 .top-nav a {
@@ -11126,28 +11130,22 @@ html {
     text-align: center;
 }
 
-.contact-form .btnContact {
+.btnContact {
     width: 200px;
     padding: 0.5rem;
-    border: none;
     border-radius: 1rem;
-    color: white;
+    color: #fff;
     background-color: #f58a07;
+    border: 0.125rem solid transparent;
+    border-color: #f58a07;
     font-weight: 600;
     cursor: pointer;
 }
 
-.btnContactSubmit {
-    width: 50%;
-    color: white;
-    border-radius: 1rem;
-    background-color: #f58a07;
-    border: none;
-    cursor: pointer;
-}
-
 .btnContact:hover {
-    background-color: #159a80;
+    color: #ffa500;
+    background-color: #fff;
+    border-color: #f58a07;
 }
 
 
