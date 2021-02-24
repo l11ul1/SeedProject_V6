@@ -11032,6 +11032,10 @@ html {
     .top-nav {
         margin-right: 40px;
     }
+
+    #table-description {
+        display: none;
+    }
 }
 
 .top-nav a {
@@ -11390,3 +11394,4 @@ header {
         background: linear-gradient(to left, rgba(240, 240, 240, 0.00), #ffa500);
         margin-left: 4vh;
     }
+

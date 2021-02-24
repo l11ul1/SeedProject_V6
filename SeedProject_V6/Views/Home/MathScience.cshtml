@@ -8,22 +8,22 @@
 <div class="container">
     <h2 class="page-section-heading text-center text-uppercase py-5">Math & Science</h2>
     <div class="row col-xl-12 col-md-offset-2 custyle">
-        <table class="table table-striped custab">
+        <table class="table table-striped custab text-center">
             <thead>
-                <tr class="text-center">
-                    <th>Class</th>
-                    <th>Description</th>
-                    <th>Price</th>
-                    <th>Purchase</th>
+                <tr>
+                    <th><h6>Class</h6></th>
+                    <th><h6>Description</h6></th>
+                    <th><h6>Price</h6></th>
+                    <th><h6>Purchase</h6></th>
                 </tr>
             </thead>
             @foreach (var item in Model)
             {
-                <tr class="">
-                    <td><img src="@item.ProductInfo.ProductImg" style="width: 150px; height: 150px;" /></td>
-                    <td class="text-center align-middle">@item.ProductInfo.ProductDescription</td>
-                    <td class="text-center align-middle">@item.ProductInfo.ProductPrice $ <br /> <p class="border-top">Get it now for @{double discount = Convert.ToDouble(item.ProductInfo.ProductPrice); discount = discount * 0.80;} @discount$</p></td>
-                    <td class="text-center align-middle"><a class='btn btn-primary' style="width: 150px;" asp-action="goToCart" asp-route-ProductID="@item.ProductId">Add to Card</a></td>
+                <tr>
+                    <td><img src="@item.ProductInfo.ProductImg" class="img-fluid"/></td>
+                    <td class="text-center align-middle"><h5>@item.ProductName</h5><br /><p id="table-description"> @item.ProductInfo.ProductDescription</p></td>
+                    <td class="text-center align-middle"><h6>@item.ProductInfo.ProductPrice $</h6> <br /> <p class="border-top text-nowrap">Get it now for @{double discount = Convert.ToDouble(item.ProductInfo.ProductPrice); discount = discount * 0.80;} @discount$</p></td>
+                    <td class="text-center align-middle"><a class='btn btn-primary text-nowrap' asp-action="goToCart" asp-route-ProductID="@item.ProductId">Add to Card</a></td>
                 </tr>
             }
         </table>
